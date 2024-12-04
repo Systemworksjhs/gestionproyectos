@@ -1,0 +1,104 @@
+
+.ulst{
+    display: flex;
+    margin-top: 80px;
+}
+
+.ulst .li_st{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ulst .li_st .icon {
+    font-size: 35px;
+    color: #091E3E;
+    margin: 0 60px;
+}
+.ulst .li_st .text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #111010;
+}
+
+/* Progress Div Css  */
+
+.ulst .li_st .progress{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #091E3E;
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+    
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 125px;
+    height: 5px;
+    background-color: #091E3E;
+    right: 30px;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+.ulst .li_st .progress .bi{
+    display: none;
+}
+.ulst .li_st .progress p{
+    font-size: 20px;
+}
+
+/* Active Css  */
+
+.ulst .li_st .active{
+    background-color: #85A633;
+    display: grid;
+    place-items: center;
+}
+.li_st .active::after{
+    background-color: #85A633;
+}
+.ulst .li_st .active p{
+    display: none;
+    
+}
+.ulst .li_st .active .bi{
+    font-size: 20px;
+    display: flex;
+}
+
+/* Responsive Css  */
+
+@media (max-width: 980px) {
+    .ulst{
+        flex-direction: column;
+    }
+    .ulst .li_st{
+        flex-direction: row;
+    }
+    .ulst .li_st .progress{
+        margin: 0px 30px;
+    }
+    .progress::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    .ulst .li_st .icon{
+        margin: 15px 0;
+    }
+}
+
+
