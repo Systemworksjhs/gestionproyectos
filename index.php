@@ -68,21 +68,17 @@
     <!-- Inicio de la barra de navegación -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="./" class="navbar-brand p-0 imagen-svg"> <object data="img/login/Logo-agrotic-07.svg" width="200" height="90"> </object></a>
+            <a href="./ " class="navbar-brand p-0 imagen-svg "> <object data="img/logos/logo_agro_tic.svg " width="200 " height="90 "> </object></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
+                <span class="fa fa-bars"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav py-0">
                     <a href="./" class="nav-item nav-link">&nbsp;Inicio&nbsp;</a>
-                    <a href="de-interes" class="nav-item nav-link">Noticias e investigaciones</a>
-                    <a href="mapainteractivo" class="nav-item nav-link">Mapa interactivo</a>
-                    <a href="datos-estadisticos" class="nav-item nav-link">Datos estadísticos</a>
-                    <a href="tienda" class="nav-item nav-link">Tienda</a>
+                    <a href="https://plandedesarrollo.narino.gov.co/plan-de-desarrollo/" target="_blank" class="nav-item nav-link">Plan de desarrollo</a>
+                    <a href="./" class="nav-item nav-link" >Mapa interactivo</a>
+                    <a href="https://narino.gov.co/" target="_blank" class="nav-item nav-link">Gobernación</a>
                 </div>
-                <!-- Inicio barra redes sociales -->
-                <?php include 'redes-sociales.html';?>
-                <!-- Fin barra redes sociales -->
             </div>
         </nav>
     </div>
@@ -90,46 +86,21 @@
 
     <!-- Inicio section main -->
     <section class="bg-map-interactive">
-        <!-- iconos redes sociales-->
-        <div class="icono-aling-right-two"><br>
-            <?php
-                if(isset($_SESSION["id"])){ ?>
-                    <p class="text-right-home text-right-home-2">Cerrar sesión<a href="configuration/logout"><img src="img/acercade/Icono-salir.png" style="width:60px;" alt=""></a></p>
-                <?php
-                }
-                else{ ?>
-                    <p class="text-right-home text-right-home-2">Ingresar <a href="login"><img src="img/acercade/Icono-ingresar.png" style="width:60px;" alt=""></a></p>
-                    <p class="text-right-home text-right-home-2">Registro <a href="registrarse"><img src="img/acercade/icono-registro.png" style="width:60px;" alt=""></a></p>
-                <?php
-                }                
-            ?>
-            <?php
-                if(isset($_SESSION["id"])){ ?>
-                    <p class="text-right-home text-right-home-2">Cuenta <a href="myCount"><img src="img/proyectos/services-01.jpg" style="width:57px;" alt=""> </a> </p>
-                <?php
-                }                
-            ?>
-            <div class="text-rigth-index mt-2">
-                <p><marquee>Sitio en actualización</marquee></p>
-            </div>
-        </div>
-        <!-- fin iconos redes sociales-->
-
         <!-- Inicio encabezado mapa -->
         <div>
-            <div class="display-tittle-login-two text-center mt-5" style="text-align: center">
-                <h1 class="title-main-agrotic text-center mb-md-4 animated zoomIn">Mapa interactivo</h1><br>
+            <div class="display-tittle-login-two text-center mt-3" style="text-align: center">
+                <h1 class="title-main-agrotic text-center mb-md-2 animated zoomIn">Mapa interactivo</h1><br>
                 <p class="titulo-information-map text-center">Departamento de Nariño.</p>
             </div>  
         </div>
         
         <!-- Inicio mapa interactivo -->
-        <div class="container-fluids facts py-5 pt-lg-0">
+        <div class="container-fluids facts py-2 pt-lg-0">
             <form name="f1">
                 <div class="row justify-content-center mb-3">
-                    <h3 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Productos registrados en AgroTic Nariño</h3>
+                    <h3 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Proyectos</h3>
                     <select class="form-control-registrer bg-light border-1 px-4" name="conjunto" id="conjunto" onchange="cambia_productos()" style="height: 35px; width:300px;font-size: 1.2rem;text-align: center" required>
-                    <option value="" selected>Seleccione un producto...</option>
+                    <option value="" selected>Seleccione un proyecto...</option>
                     <?php
                         require 'configuration/call_products_mapaInteractivo.php';
                     ?>
@@ -1234,251 +1205,18 @@
                 </svg>
             </div>
             <?php echo resultBlock($errors); ?> 
-            
-            
-            <p class="text-white mt-5">Para los productores interesados y formar parte activa en el mapa interactivo, lo invitamos a diligenciar el formulario de registro.</p>
-                
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
-                              <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-                              <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                            </svg>&nbsp;&nbsp;<span class="text-white" style="background: var(--primary);">&nbsp;&nbsp;Regístrese aquí&nbsp;&nbsp;</span>
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <div class="row g-1">
-                            <div class="col-lg-12 wow slideInUp" data-wow-delay="0.1s">
-                                <form id="registrerform" class="form-default pt-1 mt-1" role="form" action="" method="POST" enctype="multipart/form-data">
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Nombres *</h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="nombres" id="nombres" placeholder="Sus nombres" style="height: 40px;" required>
-                                        </div>
-                                       <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Genero *</h6>
-                                            <select class="form-control border-0 bg-light px-4" name="genero" id="genero" style="height: 40px;" required>
-                                                <option value="" selected>Seleccione su género...
-                                                <option value="F">Femenino
-                                                <option value="M">Masculino
-                                            </select>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <h6 class="subtittles-resgitrer">Descripción corta de su producción *</h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="description" id="description" placeholder="Descripción corta de su producción" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Dirección *</h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="direccion" id="direccion" placeholder="Direccion de residencia" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Municipio *</h6>
-                                            <select class="form-control border-0 bg-light px-4" name="id_municipality_producer" id="id_municipality_producer" style="height: 40px;" required>
-                                                <option value="" selected>Seleccione un municipio...
-                                                <option value="64" style="color:#FFF;background: var(--secondary);">Pasto
-                                                <?php 
-                                                    foreach ($db->query($sql) as $row) {  ?> 
-                                                        <option value="<?php echo $row['id_municipality']; ?>"><?php echo $row['name_municipality']; ?>
-                                                        <?php
-                                                    }
-                                                ?>
-                                            </select>
-                                        </div>
-                                        <div class="col-6">
-                                            <h6 class="subtittles-resgitrer">Corregimiento </h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="corregimiento" id="corregimiento"  placeholder="Corregimiento" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-6"></div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Correo electrónico *</h6>
-                                            <input type="email" class="form-control border-0 bg-light px-4" name="correo" id="correo" placeholder="Su correo electrónico" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Teléfono *</h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="phone" id="phone" placeholder="Teléfono" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">número de cédula *</h6>
-                                            <input type="number" class="form-control border-0 bg-light px-4" name="nrocedula" id="nrocedula" placeholder="Digitar número de cédula" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Cargar Cédula *</h6>
-                                            <input type="file" class="form-control border-0 bg-light px-4" name="filecedula" id="filecedula" placeholder="Cédula" style="height: 40px;" required accept=".pdf" required>
-                                        </div>
-                                        <div class="col-6">
-                                            <h6 class="subtittles-resgitrer">Twitter </h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="twitter" id="twitter"  placeholder="Twitter" style="height: 40px;" >
-                                        </div>
-                                        <div class="col-6">
-                                            <h6 class="subtittles-resgitrer">Facebook </h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="facebook" id="facebook"  placeholder="Facebook" style="height: 40px;" >
-                                        </div>
-                                        <div class="col-6">
-                                            <h6 class="subtittles-resgitrer">Instagram </h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="instagram" id="instagram"  placeholder="Instagram" style="height: 40px;" >
-                                        </div>
-                                        <div class="col-6">
-                                            <h6 class="subtittles-resgitrer">Página web </h6>
-                                            <input type="text" class="form-control border-0 bg-light px-4" name="direccionweb" id="direccionweb"  placeholder="Direccion web" style="height: 40px;" >
-                                        </div>
-                                    </div>    
-                                    <div class="row g-3 mt-2">
-                                        <hr>
-                                        <h6 class="subtittles-resgitrer"> Seleccione al menos un item por cada opción presentada (Presione Ctrl para seleccionar varios) *</h6>
-                                         <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Productos que produce *</h6>
-                                            <select class="form-control border-0 bg-light px-4" name="mainProduct" size="8" style="height: 80px;" required>
-                                                <option value="">Seleccione un producto...
-                                                <?php 
-                                                    foreach ($db1->query($sql1) as $row1) {  ?> 
-                                                        <option value="<?php echo $row1['id_initiatives']; ?>"><?php echo $row1['name_initiative']; ?>
-                                                        <?php
-                                                    }
-                                                ?>
-                                            </select>
-                                        </div>                           
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Frecuencia de producción </h6>
-                                            <select class="form-control border-0 bg-light px-4" name="frecuencia[]" size="8" style="height: 80px;" required multiple>
-                                                <option value="">Seleccione frecuencia...
-                                                <option value="Diario" selected>Diario
-                                                <option value="Semanal">Semanal
-                                                <option value="Quincenal">Quincenal
-                                                <option value="Mensual">Mensual
-                                                <option value="Bimensual">Bimensual
-                                                <option value="Trimestral">Trimestral
-                                                <option value="Semestral">Semestral
-                                                <option value="Anual">Anual
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h6 class="subtittles-resgitrer">Total produccion anual *</h6>
-                                            <input type="number" class="form-control border-0 bg-light px-4" name="totalproduccion" id="totalproduccion" placeholder="Total produccion anual" style="height: 40px;" required>
-                                        </div>
-                                        <div class="col-md-6 ">
-                                            <h6 class="subtittles-resgitrer">Mes o meses de producción</h6>
-                                            <select class="form-control border-0 bg-light px-4" name="mesesproduccion[]" size="8" style="height: 80px;" required multiple>
-                                                <option value="">Seleccione mes...
-                                                <option value="Enero" selected>Enero
-                                                <option value="Febrero">Febrero
-                                                <option value="Marzo">Marzo
-                                                <option value="Abril">Abril
-                                                <option value="">Mayo
-                                                <option value="Mayo">Junio
-                                                <option value="Julio">Julio
-                                                <option value="Agosto">Agosto
-                                                <option value="Septiembre">Septiembre
-                                                <option value="Octubre">Octubre
-                                                <option value="Noviembre">Noviembre
-                                                <option value="Diciembre">Diciembre
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-12 text-center">
-                                            <fieldset>
-                                                <label class="subtittles-resgitrer"><input type="checkbox" required> He leido y acepto el aviso legal y la política de privacidad. <a class="border-bottom" href="https://agroticnarino.com.co/admin/uploads/documents/Terminos-y-condiciones.pdf" target="_blank"> &nbsp;&nbsp;ver documento.</a></label>
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-12 mt-5">
-                                            <button class="btn btn-primary w-100 py-1 text-white" type="submit">Enviar registro</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row justificy-content-center">
-                <div class="col-md-12">
-                    <p class="alert-info-municipality2" style="width: auto;">Nariño tiene un gran potencial en cuanto al desarrollo del sector hortofrutícola, por eso se requiere identificar necesidades, las cuales deben
-                        permitir formular proyectos que al ser implementados logren el desarrollo del sector. <br> <br> Históricamente Nariño y particularmente la zona sur ha cumplido el papel de proveedor de alimentos para los mercados domésticos e industrias del interior del país en una situación de permanente desventaja, ocasionada principalmente
-                        por dos aspectos: en la parte de producción las técnicas agrícolas se han mantenido en condiciones casi inmodificables, con bajos niveles de productividad, débil planificación productiva y escasa organización de los productores (Gobernación de Nariño e Instituto Colombiano de Bienestar Familiar 2010).</p>
-                    </p>
-                </div>
-            </div>
+
         </div>
         <!-- Fin mapa interactivo -->
     </section>
     <!-- Fin section main -->
 
     <section class="heading-acercade" id="acercade">
-        <div class="display-tittles-gral mt-2 section-title text-center">
-            <h1 class="title-main2-agrotic mb-md-2 animated zoomIn pb-1">Georeferenciación<br>Sitios registrados</h1>
-            <h5 class="text-color-primary pb-5">Seleccione el municipio</h5>
-        </div>
-        <!-- Contenedor de municipios -->
-        <div class="container-fluid py-1 wow fadeInUp position-relative" data-wow-delay="0.1s">
-            <div class="container py-0">
-                <div class="row g-0 position-map">
-                    <!-- Inicio opciones mapas interactivos -->
-                    <div class="col-lg-12">
-                        <div class="row g-2 mt-4">
-                            <!-- Pasto -->
-                            <div class="col-md-4 wow slideInUp"  data-wow-delay="0.6s m-5">
-                                <div class="blog-item rounded overflow-hidden">
-                                    <div class="blog-img position-relative overflow-hidden">
-                                        <li onclick="messagesNews()" id="mpiopasto" style="list-style:none"><img class="img-fluid card-img-top" src="img/city/ciudad-Pasto-02.png" style="width:300px; height:370px;" alt="mapa-Pasto"></li>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ipiales -->
-                            <div class="col-md-4 wow slideInUp"  data-wow-delay="0.6s m-5 p-5">
-                                <div class="blog-item rounded overflow-hidden">
-                                    <div class="blog-img position-relative overflow-hidden">
-                                        <li onclick="messagesNews()" id="mpioipiales" style="list-style:none"><img class="img-fluid card-img-top" src="img/city/Ciudad-ipiales-02.png" style="width:300px; height:370px;" alt="imagen-ipiales"></li>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Tumaco -->
-                            <div class="col-md-4 wow slideInUp"  data-wow-delay="0.6s m-5">
-                                <div class="blog-item rounded overflow-hidden">
-                                    <div class="blog-img position-relative overflow-hidden">
-                                        <li onclick="messagesNews()" id="mpiotumaco" style="list-style:none"><img class="img-fluid card-img-top" src="img/city/ciudad-tumaco-02.png" style="width:300px; height:370px;" alt="imagen-tumaco"></li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin  mapas interactivos -->
-                </div>
-            </div>
-        </div>
-        <!-- Fin contenedor municipios -->
+
         <!-- <img src="img/news/Tallo-con-hojas-02.png" alt="" class="capa12">-->
         <img src="./img/map/hojas-lado-derecho.png" width="350px" class="capa21" />
     </section>
-    <!-- Inicio mapa Pasto -->
-    <div class="overflow-hidden">
-        <div class="container-fluid py-5 mt-0 wow fadeInUp" data-wow-delay="0.1s">
-            
-                <div class="row g-5">
-                    <div class="col-lg-4">
-                        <div class="section-title position-relative p-4">
-                            <h4 class="mb-0">Necesita un registro? contáctenos</h4>
-                        </div>
-                        <p class="p-4">Escríbenos, contamos con un excelente equipo de trabajo que está dispuesto a resolver tus dudas. Será un gusto atenderte.</p>
-                        <div class="centrar-text-botton">
-                            <a href="registrarse"><button class="botton-register w-10 py-3"><span>Registrarse</span></button></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-8" style="background-color: var(--gray);">
-                        <div class="row mt-3 mb-3 ml-5">
-                            <div id="mapita" class="">
-                                <!-- Aqui se muestra mapa -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-        </div>
-        
-        
-    </div>
+
     <!-- Fin mapa Interactivo -->
     
     <!-- Inicio pie página -->
@@ -1533,43 +1271,6 @@
             }
     </script>
 
-        <!-- mapa Pasto -->
-        <script>
-        var mapita = L.map('mapita').setView([1.2055, -77.2704], 14);
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Datos &copy; <a href="#" target="">' + ' Prometeus</a> (<a href="" target="blank"></a>) | Gobernación de Nariño <a href="https://sitio.narino.gov.co" target="blank">Systemworks</a> &copy; Sebastián  & Duván (<a href="#" target="blank">2023</a>)'
-        }).addTo(mapita);
-        var photoIcon = L.icon({
-            iconUrl: 'img/marcador/photo.svg',
-            iconSize: [38, 95],
-            popupAnchor: [0, -15]
-        });
-        var customPopup1 = "<img src='img/marcador-detalles/pasto/plazapotrerillopasto.jpg' alt='Plaza Potrerillo Pasto'' width='200px'/><br/>Plaza Potrerillo Pasto. Fuente: Prometeus S.A.S, imagen donada.";
-        var customPopup2 = "<img src='img/marcador-detalles/pasto/plazalosdospuentespasto.jpg' alt='Mercado Los Dos Puentes'' width='200px'/><br/>Mercado Los Dos Puentes. Fuente: Prometeus S.A.S, imagen donada.";
-        var customPopup3 = "<img src='img/marcador-detalles/pasto/plazaeltejarpasto.jpg' alt='Plaza mercado El Tejar'' width='200px'/><br/>Plaza mercado El Tejar Pasto. Fuente: Prometeus S.A.S, imagen donada.";
-        var customPopup4 = "<img src='img/marcador-detalles/pasto/plazamercadoanganoy.jpg' alt='Plaza mercado Anganoy'' width='200px'/><br/>Plaza mercado Anganoy. Fuente: Prometeus S.A.S, imagen donada.";
-        var customOptions = {
-            maxWidth: '200',
-            className: 'custom'
-        };
-        var marker = L.marker([1.1973, -77.2703], {
-            icon: photoIcon
-        }).bindPopup(customPopup1, customOptions).addTo(mapita);
-
-        var marker = L.marker([1.2156, -77.2752], {
-            icon: photoIcon
-        }).bindPopup(customPopup2, customOptions).addTo(mapita);
-
-        var marker = L.marker([1.1983, -77.2634], {
-            icon: photoIcon
-        }).bindPopup(customPopup3, customOptions).addTo(mapita);
-        
-        var marker = L.marker([1.2099, -77.2994], {
-            icon: photoIcon
-        }).bindPopup(customPopup3, customOptions).addTo(mapita);
-    </script>
-
-
     <!--Opcion seleccionada-->
     <script type="text/javascript">
         $(function messagesNews() {
@@ -1594,7 +1295,7 @@
                         },
                         error: function(jqXHR, testStatus, error) {
                             console.log(error);
-                            alert("Página " + href + " NO se puede abrir. Error:" + error);
+                            alert("Página " + href + " No se puede abrir. Error:" + error);
                             //$('#loader').hide();
                         },
                         timeout: 8000

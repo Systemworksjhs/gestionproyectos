@@ -2,9 +2,7 @@
     require 'configuration/conection.php';
     $idiniciativa = $_GET["idiniciativa"];
     $identificador = $_GET["identificador"];
-    $sql="SELECT id_initiative, id_initiatives, cod_municipality, name_initiative, direction, estado, productHome, comprasPublicas 
-    FROM initiatives_municipalities 
-    WHERE (cod_municipality=$identificador and id_initiatives=$idiniciativa) AND (estado=1)";
+    $sql="SELECT id_initiative, id_initiatives, cod_municipality, name_initiative, direction, estado, productHome, comprasPublicas FROM initiatives_municipalities WHERE (cod_municipality=$identificador and id_initiatives=$idiniciativa) AND (estado=1)";
     $resultado = $mysqli->query($sql) or die($mysqli->error);
     $sw=0;
     while($row = $resultado->fetch_assoc()) { 

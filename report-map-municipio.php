@@ -4,7 +4,6 @@
     if (!empty($_GET["idproductS"])) {
         $idproductS = $_GET["idproductS"];
     }else{
-        
         $idproductS=0;
     }
     $municipio = $_GET["municipio"];
@@ -197,9 +196,9 @@
     <div class="container-fluids facts py-5 pt-lg-0">
         <form name="f1">
             <div class="row mb-5 justify-content-center">
-                <h6 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Productos registrados en AgroTic Nariño para: <?php echo $municipio?></h6>
+                <h6 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Proyectos registrados para: <?php echo $municipio?></h6>
                 <select class="form-control-registrer bg-light border-1 px-4" name="conjuntos" id="conjuntos" onchange="cambia_productos()" style="height: 35px; width:300px;font-size: 1.2rem;text-align: center" required>
-                <option value="" selected>Seleccione un producto...</option>
+                <option value="" selected>Seleccione un proyecto...</option>
                     <?php
                         require 'configuration/call-products-municipalities.php';
                     ?>
@@ -271,7 +270,7 @@
                     // Error en url
                     error: function(jqXHR, testStatus, error) {
                         console.log(error);
-                        alert("Página " + href + " NO se puede abrir. Error:" + error);
+                        alert("Página " + href + " No se puede abrir. Error:" + error);
                     },
                     timeout: 8000
                 });

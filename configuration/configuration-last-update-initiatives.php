@@ -8,7 +8,7 @@
     $resultconsultlast = $mysqli->query($sqllastupdate) or die($mysqli->error);
     $sw=0;
     while($showregistretlast = $resultconsultlast->fetch_assoc()) { 
-        if($row['comprasPublicas']==1){ ?>
+        if($showregistretlast['comprasPublicas']==1){ ?>
             <li id="<?php echo $showregistretlast['id_initiative']; ?>" class="position-relative list-group-itemscont blog-test list-group-item mb-1"><?php echo $showregistretlast['name_initiative']; ?>  &nbsp; &nbsp; <img src="img/icons/icon-ubicacion.svg" width="13px"> &nbsp;<?php echo $showregistretlast['productHome']; ?></li>
         <?php
         }
