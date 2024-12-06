@@ -87,12 +87,12 @@
 				$mail1->isSMTP();
 				$mail1->Host = 'smtp.localhost';
 				$mail1->SMTPAuth = true;
-				$mail1->Username = 'contactenos@agroticnarino.com.co';
+				$mail1->Username = 'contactenos@gestionproyectos.narino.gov.co';
 				$mail1->Password = '@dm1nC0nt@ct0$*';
 				$mail1->SMTPSecure = 'tls';
 				$mail1->Port = 25;
 				$mail1->SMTPOptions = array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true));
-				$mail1->setFrom('contactenos@agroticnarino.com.co', '');
+				$mail1->setFrom('contactenos@gestionproyectos.narino.gov.co', '');
 				$mail1->addAddress($email, '');     // Add a recipient
 				$mail1->isHTML(true);				// Set email format to HTML
 				$mail1->Subject = 'Confirmación de registro en la plataforma de Agrotic - Nariño.';

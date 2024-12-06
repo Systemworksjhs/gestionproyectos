@@ -2,9 +2,9 @@
         require_once "controllers/curl.controller.php";
 
         //Url principal
-        $path= "http://agroticnarino.com.co/";
-        $pathaux= "http://agroticnarino.com.co/tienda?";
-        $pathaux2 = "http://agroticnarino.com.co/select-city";
+        $path= "http://gestionproyectos.narino.gov.co/";
+        $pathaux= "http://gestionproyectos.narino.gov.co/tienda?";
+        $pathaux2 = "http://gestionproyectos.narino.gov.co/select-city";
 
         
         

@@ -1,54 +1,41 @@
 <?php
 	session_start();
-	if(isset($_SESSION["id"])){
-        $nombre          = $_SESSION['name'];
-        $tipo_usuario    = $_SESSION['tipo_usuario'];
-        $correo          = $_SESSION['correo'];
-        $id_user         = $_SESSION['id'];
-	}
     require('configuration/configuration-fills.php');
     require 'configuration/conection.php';
     require 'configuration/funcscopy.php';
     require 'configuration/registreproducer.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
-    <title>Agroticnarino</title>
+    <title>Gestión proyectos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Agrotic Nariño" name="">
-    <meta content="Agrotic Nariño" name="agroticnarino">
-    <meta name="keywords" content="tienda virtual, compra tienda virtual, comprar en linea pasto, agrotic tienda virtual pasto, html">
+    <meta content="Gestión proyectos" name="">
+    <meta content="Gestión proyectos" name="Gestión proyectos">
+    <meta name="keywords" content="Proyectos, gestión proyectos, proyectos nariño, inversion proyectos nariño, html">
     <!-- Favicon -->
     <link href="img/logos/favicon-32x32.png" rel="icon">
-
     <!-- Fuentes web de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Hoja de estilos de fuentes de iconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Hoja de estilo de bibliotecas -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/animacion/animacion.min.css" rel="stylesheet">
-
     <!-- Hoja de estilo Bootstrap personalizada -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Template Hoja de estilo -->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <style>
         #mapita {
-            width: 770px;
-            height: 500px;
+            width: 720px;
+            height: 450px;
             float:left;
         }
     </style>
@@ -60,25 +47,26 @@
         <div class="spinner"></div>
     </div>
     <!-- Fin giratorio -->
-
     <!-- Inicio barra superior -->
         <?php include 'barra_superior.php';?>
     <!-- Fin barra superior -->
-
     <!-- Inicio de la barra de navegación -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="./ " class="navbar-brand p-0 imagen-svg "> <object data="img/logos/logo_agro_tic.svg " width="200 " height="90 "> </object></a>
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-2 py-lg-0">
+            <a href="./" class="navbar-brand p-0 imagen-svg"> <object data="img/login/logo-gobernar.png" width="200" height="90"> </object></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav py-0">
                     <a href="./" class="nav-item nav-link">&nbsp;Inicio&nbsp;</a>
-                    <a href="https://plandedesarrollo.narino.gov.co/plan-de-desarrollo/" target="_blank" class="nav-item nav-link">Plan de desarrollo</a>
-                    <a href="./" class="nav-item nav-link" >Mapa interactivo</a>
+                    <a href="https://plandedesarrollo.narino.gov.co/" target="_blank" class="nav-item nav-link">Plan de desarrollo</a>
                     <a href="https://narino.gov.co/" target="_blank" class="nav-item nav-link">Gobernación</a>
+                    <a href="https://narino.gov.co/rendicion-de-cuentas-2024/" target="_blank" class="nav-item nav-link">Rendición de cuentas</a>
                 </div>
+                <!-- Inicio barra redes sociales -->
+                <?php include 'redes-sociales.html';?>
+                <!-- Fin barra redes sociales -->
             </div>
         </nav>
     </div>
@@ -88,19 +76,18 @@
     <section class="bg-map-interactive">
         <!-- Inicio encabezado mapa -->
         <div>
-            <div class="display-tittle-login-two text-center mt-3" style="text-align: center">
-                <h1 class="title-main-agrotic text-center mb-md-2 animated zoomIn">Mapa interactivo</h1><br>
+            <div class="display-tittle-login-two text-center mt-2" style="text-align: center">
+                <h1 class="title-main-agrotic text-center mb-md-4 animated zoomIn">Mapa interactivo</h1><br>
                 <p class="titulo-information-map text-center">Departamento de Nariño.</p>
             </div>  
         </div>
-        
         <!-- Inicio mapa interactivo -->
         <div class="container-fluids facts py-2 pt-lg-0">
             <form name="f1">
                 <div class="row justify-content-center mb-3">
-                    <h3 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Proyectos</h3>
+                    <h3 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Proyectos registrados</h3>
                     <select class="form-control-registrer bg-light border-1 px-4" name="conjunto" id="conjunto" onchange="cambia_productos()" style="height: 35px; width:300px;font-size: 1.2rem;text-align: center" required>
-                    <option value="" selected>Seleccione un proyecto...</option>
+                    <option value="" selected>Seleccione un proyectos...</option>
                     <?php
                         require 'configuration/call_products_mapaInteractivo.php';
                     ?>
@@ -108,11 +95,8 @@
                 </div> 
             </form>
             <!-- Inicio submenu -->
-            
-            
             <!-- Fin submenu -->
             <div id="resultados-1" class="mapadiv">
-                
                 <svg class="mt-1 py-1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 375.94 392.99" xml:space="preserve">
                     <g>
                     <a href="report-map-municipio?municipio=La Unión&identificador=<?php echo base64_encode(33)?>" xlink:title="LA UNIÓN">   <!--programar enlace + nombre + id-->
@@ -1205,23 +1189,12 @@
                 </svg>
             </div>
             <?php echo resultBlock($errors); ?> 
-
         </div>
         <!-- Fin mapa interactivo -->
     </section>
     <!-- Fin section main -->
-
-    <section class="heading-acercade" id="acercade">
-
-        <!-- <img src="img/news/Tallo-con-hojas-02.png" alt="" class="capa12">-->
-        <img src="./img/map/hojas-lado-derecho.png" width="350px" class="capa21" />
-    </section>
-
-    <!-- Fin mapa Interactivo -->
-    
     <!-- Inicio pie página -->
-     <?php include 'footer.html';?>
-
+    <?php include 'footer.html';?>
     <!-- Librerias de JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1230,12 +1203,10 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/principal.js"></script>
     <!-- Script para selectores 
     <script src="js/selector.js"></script>-->
-
     <!--Opcion seleccionada-->
     <script type="text/javascript">
         function cambia_productos() {
@@ -1295,7 +1266,7 @@
                         },
                         error: function(jqXHR, testStatus, error) {
                             console.log(error);
-                            alert("Página " + href + " No se puede abrir. Error:" + error);
+                            alert("Página " + href + " NO se puede abrir. Error:" + error);
                             //$('#loader').hide();
                         },
                         timeout: 8000
@@ -1320,7 +1291,5 @@
             });
         });
     </script>
-
 </body>
-
 </html>

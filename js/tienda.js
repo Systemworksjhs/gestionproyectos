@@ -323,7 +323,7 @@ function cambiarCantidadMercados(quantity, move, index){
     
     //Traer precio del mercado
     var settings = {
-            "url": "https://api.agroticnarino.com.co/mercados_campesinos?linkTo=id&equalTo=1",
+            "url": "https://api.gestionproyectos.narino.gov.co/mercados_campesinos?linkTo=id&equalTo=1",
             "method": "GET",
             "timeout": 0
     };
@@ -370,7 +370,7 @@ function cambiarCantidadMercados2(quantity, move, index){
     
     //Traer precio del mercado
         var settings = {
-                "url": "https://api.agroticnarino.com.co/mercados_campesinos?linkTo=id&equalTo=2",
+                "url": "https://api.gestionproyectos.narino.gov.co/mercados_campesinos?linkTo=id&equalTo=2",
                 "method": "GET",
                 "timeout": 0
         };
@@ -409,7 +409,7 @@ function presentacion(index,idProduct){
     
     //Traer desde BD el precio del gramo según presentación
     var settings = {
-            "url": "https://api.agroticnarino.com.co/productos_dpto_narino?linkTo=id_product&equalTo="+idProduct,
+            "url": "https://api.gestionproyectos.narino.gov.co/productos_dpto_narino?linkTo=id_product&equalTo="+idProduct,
             "method": "GET",
             "timeout": 0,
     };
@@ -868,7 +868,7 @@ function adicionarProductos(idProduct,currentUrl,def){
     
     //Traer desde BD el precio del gramo según presentación
     var settings = {
-            "url": "https://api.agroticnarino.com.co/productos_dpto_narino?linkTo=id_product&equalTo="+idProduct,
+            "url": "https://api.gestionproyectos.narino.gov.co/productos_dpto_narino?linkTo=id_product&equalTo="+idProduct,
             "method": "GET",
             "timeout": 0,
     };
@@ -996,7 +996,7 @@ async function modificarPrecios() {
     return new Promise(function(resolve, reject) {
       // Crear la configuración para la llamada AJAX
       var settings = {
-        "url": "https://api.agroticnarino.com.co/productos_dpto_narino?linkTo=id_product&equalTo=" + idp,
+        "url": "https://api.gestionproyectos.narino.gov.co/productos_dpto_narino?linkTo=id_product&equalTo=" + idp,
         "method": "GET",
         "timeout": 0,
       };
@@ -1845,7 +1845,7 @@ function checkout(){
           <input type="hidden" name="amount-in-cents" value="`+total+`" />
           <input type="hidden" name="reference" value="`+referenceCode+`" />
           <!-- OPCIONALES -->
-          <input type="hidden" name="redirect-url" value="https://agroticnarino.com.co/checkout" />
+          <input type="hidden" name="redirect-url" value="https://gestionproyectos.narino.gov.co/checkout" />
           <input type="hidden" name="customer-data:email" value="`+emailOrder+`" />
           <input type="hidden" name="customer-data:full-name" value="`+nombre+` `+apellido+`" />
           <input type="hidden" name="customer-data:phone-number" value="+57`+telefono+`" />
@@ -1868,7 +1868,7 @@ function checkout(){
         /*========== Actualizar perfil ==========*/
         
         var settings = {
-                "url": "https://api.agroticnarino.com.co/usuarios?nameId=id_user&id="+idUser,
+                "url": "https://api.gestionproyectos.narino.gov.co/usuarios?nameId=id_user&id="+idUser,
                 "method": "PUT",
                 "timeout": 0,
                 "headers": {
@@ -1947,7 +1947,7 @@ function checkoutMercadoCampesino(){
         
         //Traer precio del mercado
         var settings = {
-                "url": "https://api.agroticnarino.com.co/mercados_campesinos?linkTo=id&equalTo=1",
+                "url": "https://api.gestionproyectos.narino.gov.co/mercados_campesinos?linkTo=id&equalTo=1",
                 "method": "GET",
                 "timeout": 0
         };
@@ -2006,7 +2006,7 @@ function checkoutMercadoCampesino(){
                   <input type="hidden" name="amount-in-cents" value="`+total+`" />
                   <input type="hidden" name="reference" value="`+referenceCode+`" />
                   <!-- OPCIONALES -->
-                  <input type="hidden" name="redirect-url" value="https://agroticnarino.com.co/checkout" />
+                  <input type="hidden" name="redirect-url" value="https://gestionproyectos.narino.gov.co/checkout" />
                   <input type="hidden" name="customer-data:email" value="`+emailOrder+`" />
                   <input type="hidden" name="customer-data:full-name" value="`+nombre+` `+apellido+`" />
                   <input type="hidden" name="customer-data:phone-number" value="+57`+telefono+`" />
@@ -2028,7 +2028,7 @@ function checkoutMercadoCampesino(){
                 /*========== Actualizar perfil ==========*/
                 
                 var settings = {
-                        "url": "https://api.agroticnarino.com.co/usuarios?nameId=id_user&id="+idUser,
+                        "url": "https://api.gestionproyectos.narino.gov.co/usuarios?nameId=id_user&id="+idUser,
                         "method": "PUT",
                         "timeout": 0,
                         "headers": {
@@ -2106,7 +2106,7 @@ function checkoutMercadoCampesino2(){
         
         //Traer precio del mercado
         var settings = {
-                "url": "https://api.agroticnarino.com.co/mercados_campesinos?linkTo=id&equalTo=2",
+                "url": "https://api.gestionproyectos.narino.gov.co/mercados_campesinos?linkTo=id&equalTo=2",
                 "method": "GET",
                 "timeout": 0
         };
@@ -2167,7 +2167,7 @@ function checkoutMercadoCampesino2(){
                   <input type="hidden" name="amount-in-cents" value="`+total+`" />
                   <input type="hidden" name="reference" value="`+referenceCode+`" />
                   <!-- OPCIONALES -->
-                  <input type="hidden" name="redirect-url" value="https://agroticnarino.com.co/checkout" />
+                  <input type="hidden" name="redirect-url" value="https://gestionproyectos.narino.gov.co/checkout" />
                   <input type="hidden" name="customer-data:email" value="`+emailOrder+`" />
                   <input type="hidden" name="customer-data:full-name" value="`+nombre+` `+apellido+`" />
                   <input type="hidden" name="customer-data:phone-number" value="+57`+telefono+`" />
@@ -2189,7 +2189,7 @@ function checkoutMercadoCampesino2(){
                 /*========== Actualizar perfil ==========*/
                 
                 var settings = {
-                        "url": "https://api.agroticnarino.com.co/usuarios?nameId=id_user&id="+idUser,
+                        "url": "https://api.gestionproyectos.narino.gov.co/usuarios?nameId=id_user&id="+idUser,
                         "method": "PUT",
                         "timeout": 0,
                         "headers": {
@@ -2413,7 +2413,7 @@ function crearOrdenWompiMC(){
     
     //Traer precio del mercado
     var settings = {
-            "url": "https://api.agroticnarino.com.co/mercados_campesinos?linkTo=id&equalTo=1",
+            "url": "https://api.gestionproyectos.narino.gov.co/mercados_campesinos?linkTo=id&equalTo=1",
             "method": "GET",
             "timeout": 0
     };
@@ -2508,7 +2508,7 @@ function crearOrdenWompiMC2(){
     
     //Traer precio del mercado
     var settings = {
-            "url": "https://api.agroticnarino.com.co/mercados_campesinos?linkTo=id&equalTo=2",
+            "url": "https://api.gestionproyectos.narino.gov.co/mercados_campesinos?linkTo=id&equalTo=2",
             "method": "GET",
             "timeout": 0
     };

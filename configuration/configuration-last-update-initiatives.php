@@ -14,7 +14,7 @@
         }
         else
         {?>
-           <li id="<?php echo $showregistretlast['id_initiative']; ?>" class="position-relative list-group-itemscont blog-test list-group-item mb-1"><img src="img/insignias/icono-pequeno-productor.jpeg" width="30px"  alt="Insignias logradas"><?php echo $showregistretlast['name_initiative']; ?>  &nbsp; &nbsp; <img src="img/icons/icon-ubicacion.svg" width="13px"> &nbsp;<?php echo $showregistretlast['productHome']; ?></li> 
+            <li id="<?php echo $showregistretlast['id_initiative']; ?>" class="position-relative list-group-itemscont blog-test list-group-item mb-1"><img src="img/insignias/basico.png" width="30px"  alt="Hitos logrados"><?php echo $showregistretlast['name_initiative']; ?>  &nbsp; &nbsp; <img src="img/icons/icon-ubicacion.svg" width="13px"> &nbsp;<?php echo $showregistretlast['productHome']; ?></li> 
         <?php 
         }
         $sw=1;

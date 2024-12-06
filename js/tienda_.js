@@ -1995,7 +1995,7 @@ function checkout(){
           <input type="hidden" name="amount-in-cents" value="`+total+`" />
           <input type="hidden" name="reference" value="`+referenceCode+`" />
           <!-- OPCIONALES -->
-          <input type="hidden" name="redirect-url" value="https://agroticnarino.com.co/checkout" />
+          <input type="hidden" name="redirect-url" value="https://gestionproyectos.narino.gov.co/checkout" />
           <input type="hidden" name="customer-data:email" value="`+emailOrder+`" />
           <input type="hidden" name="customer-data:full-name" value="`+nombre+` `+apellido+`" />
           <input type="hidden" name="customer-data:phone-number" value="+57`+telefono+`" />
@@ -2124,7 +2124,7 @@ function checkoutMercadoCampesino(){
           <input type="hidden" name="amount-in-cents" value="`+total+`" />
           <input type="hidden" name="reference" value="`+referenceCode+`" />
           <!-- OPCIONALES -->
-          <input type="hidden" name="redirect-url" value="https://agroticnarino.com.co/checkout" />
+          <input type="hidden" name="redirect-url" value="https://gestionproyectos.narino.gov.co/checkout" />
           <input type="hidden" name="customer-data:email" value="`+emailOrder+`" />
           <input type="hidden" name="customer-data:full-name" value="`+nombre+` `+apellido+`" />
           <input type="hidden" name="customer-data:phone-number" value="+57`+telefono+`" />

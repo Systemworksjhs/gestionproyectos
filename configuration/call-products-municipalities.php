@@ -1,12 +1,14 @@
 
 <?php
     require 'configuration/conection.php';
-    $sqlProductosMunicipality="SELECT id_municipality, productsMunicipio FROM municipality WHERE (id_municipality=$identificador)";
+    $sqlProductosMunicipality="SELECT id_municipality, projectsMunicipio 
+    FROM municipality 
+    WHERE (id_municipality=$identificador)";
     $resulsqlProductosMunicipality = $mysqli->query($sqlProductosMunicipality) or die($mysqli->error);
     $sw=0;
     echo "iniciando";
     while($rowfound = $resulsqlProductosMunicipality->fetch_assoc()) {
-        $datos = json_decode($rowfound['productsMunicipio']);
+        $datos = json_decode($rowfound['projectsMunicipio']);
         $i=0;
         echo $i;
         foreach($datos as $fila) {
