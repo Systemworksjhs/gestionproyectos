@@ -51,6 +51,7 @@
     @media screen and (max-width: 432px){
         .title-main-agrotic{
             font-size:47px;
+			margin-top: -60px;
         }
     }
     
@@ -3184,6 +3185,7 @@ section.info-folletos-impacto {
 @media (max-width: 768px) {
     .mapadiv {
         width: auto;
+		margin-top: -50px;
     }
 }
 
@@ -3369,6 +3371,13 @@ section.info-folletos-impacto {
     color: #FFF;
 }
 
+@media screen and (max-width: 576px){
+    .fondo-titulo-municipio{
+        width: 100%;
+        margin-top: -90px;
+        margin-left: inherit;
+    }
+}
 
 /* Fin mapa*/
 
@@ -3452,6 +3461,7 @@ section.info-folletos-impacto {
     border-radius: 10px !important;
     cursor: pointer !important;
     padding-left: 6px;
+    padding-top: 4px;
 }
 
 
@@ -3475,10 +3485,6 @@ section.info-folletos-impacto {
         line-height: 0.6rem !important;
     }
 }
-
-
-
-
 
 .list-group-item:hover {
     cursor: pointer;
@@ -3518,12 +3524,16 @@ section.info-folletos-impacto {
     background: var(--primary);
     height: 3rem;
     color: #fff;
+    height: auto;
 }
 
 @media (max-width: 768px) {
     .list-group-items {
         font-size: small;
         line-height: 0.6rem !important;
+        padding-top: 11px;
+        height: auto;
+        padding-bottom: 5px;
     }
 }
 
@@ -7242,15 +7252,19 @@ background-image:
 }
 
 
-@media only screen and (min-width: 360px) and (max-width: 380px) {
+@media only screen and (min-width: 300px) and (max-width: 390px) {
     .form-control-registrer{
         width: 90%;
+        margin-top: -105px;
+        z-index: 10;
     }
 }
 
 @media only screen and (min-width: 381px) and (max-width: 450px) {
     .form-control-registrer{
         width: 95%;
+		margin-top: -115px;
+		z-index: 10;
     }
 }
 
@@ -7260,7 +7274,15 @@ background-image:
     font-size: 13px;
     padding-top: 0px;
     font-weight: bolder;
-    margin-top: 2px;
+    margin-top: -29px;
+	z-index: 0;
+}
+
+@media (max-width: 576px) {
+    .subtittles-resgitrer  {
+        margin-top: -135px;
+        z-index: 0;
+    }
 }
 
 .bg-input-registrer {
@@ -7323,6 +7345,14 @@ background-image:
     font-weight:bold;
 }
 
+@media screen and (max-width: 576px){
+    .titulo-information-map-result{
+        width: 100%;
+        line-height: 0.99em;
+        margin-top: -35px;
+    }
+}
+
 .show-details-municipalities-1 {
     padding: 0px 0px 0px 0px;
     background-color: rgba(0, 163, 232, 0.5);
@@ -7333,6 +7363,14 @@ background-image:
     padding: 30px 30px 30px 30px;
     /*background-color: rgba(96, 226, 44, 0.5);*/
     box-shadow: 10px 10px 20px 10px rgb(211 211 211 / 75%);
+}
+
+@media screen and (max-width: 576px){
+    .show-details-municipalities-2{
+        padding: 5px 5px 5px 5px;
+        /*background-color: rgba(96, 226, 44, 0.5);*/
+        box-shadow: 10px 10px 20px 10px rgb(211 211 211 / 75%);
+    }
 }
 
 .show-details-municipalities-3 {
@@ -7859,7 +7897,7 @@ button:not(:disabled),
 
     /* pagina no encontrada */
     .bg-page-notfound {
-        background-image: url('../img/notfound/fondo-pagina-no-encontrada.jpg');
+        background-image: url('../img/backgrounds/carousel-6.jpg');
         background-position: center center;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -7896,22 +7934,36 @@ button:not(:disabled),
     }
 
     .bg-gray-notfound {
-        background-color: #FFF; //var(--gray);
+        background-color: #FFF;
         border-radius: 20px;
         text-align: center;
         font-weight: bold;
+    }
+
+    @media (max-width: 576px) {
+        .bg-gray-notfound {
+            margin: 15px;
+        }
     }
 
     .subtitle-primary-nofound {
         color: var(--primary);
         font-size: 26px;
     }
+
     .text-primary-nofound {
         color: var(--primary);
-        font-size: 11px;
+        font-size: 14px;
         font-weight: lighter;
         padding-left: 100px;
         padding-right: 100px;
+    }
+
+    @media (max-width: 576px) {
+        .text-primary-nofound {
+            margin: 12px;
+            font-size: 14pxs;
+        }
     }
   
   /*---------------------

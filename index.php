@@ -87,7 +87,7 @@
                 <div class="row justify-content-center mb-3">
                     <h3 class="subtittles-resgitrer" style="text-align: center;font-size: 1.1rem">Proyectos registrados</h3>
                     <select class="form-control-registrer bg-light border-1 px-4" name="conjunto" id="conjunto" onchange="cambia_productos()" style="height: 35px; width:300px;font-size: 1.2rem;text-align: center" required>
-                    <option value="" selected>Seleccione un proyectos...</option>
+                    <option value="" selected>Seleccione un proyecto...</option>
                     <?php
                         require 'configuration/call_products_mapaInteractivo.php';
                     ?>
