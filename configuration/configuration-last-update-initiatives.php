@@ -20,7 +20,16 @@
         $sw=1;
     } 
     if($sw==0){?>
-        <p  class="list-group-item mb-1">Por favor seleccione un producto para iniciar la búsqueda</p>
+        <p  class="list-group-item mb-1">Por favor seleccione un proyecto para iniciar la búsqueda...</p>
         <?php
+            $sqllastupdate="SELECT id_initiative, id_initiatives, cod_municipality, name_initiative, direction, productHome, comprasPublicas 
+            FROM initiatives_municipalities 
+            WHERE (cod_municipality=$identificador) AND (estado=1) ORDER BY id_initiative DESC LIMIT 1 ";
+            $resultconsultlast = $mysqli->query($sqllastupdate) or die($mysqli->error);
+            while($showregistretlast = $resultconsultlast->fetch_assoc()) { 
+            ?>
+                <li id="<?php echo $showregistretlast['id_initiative']; ?>" class="position-relative list-group-itemscont blog-test list-group-item mb-1"><img src="img/insignias/basico.png" width="30px" style="margin-right:5px" alt="Hitos logrados"><?php echo $showregistretlast['name_initiative']; ?>  &nbsp; &nbsp; <img src="img/icons/icon-ubicacion.svg" width="13px"> &nbsp;<?php echo $showregistretlast['productHome']; ?></li> 
+            <?php  
+            }
     }
 ?>
